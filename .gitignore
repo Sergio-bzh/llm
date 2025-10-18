@@ -1,0 +1,21 @@
+### Ignorer les fichiers de configuration de l'éditeur ###
+.vscode/
+.idea/
+
+### Ignorer les fichiers de configuration de conteneurs ###
+.vagrant/
+
+### Ignorer les fichiers de configuration de machines virtuelles ###
+*.vmx
+*.vmdk
+*.nvram
+*.vagrant/
+
+### Ignorer les fichiers temporaires ###
+*.swp
+*~.DS_Store
+*.log
+
+### Ignorer les fichiers spécifiques au système d'exploitation ###
+.DS_Store
+Thumbs.db
