@@ -25,7 +25,7 @@ Il peut être implémenté en suivant les grandes lignes de ce README ou mieux e
 
 ## Lancer Ollama
 - Se connecter à la VM en SSH : ```ssh utilisateur@vm```
-- Lancer le modèle : ```ollama run llama3```
+- Télécharger et lancer le modèle : ```ollama run llama3```
 
 ## Pour Vagrant
 Pour ceux d'entre vous utilisant un hypervisseur de type 2 (VMWare Fusion, Virtualbox, UTM ou autre) couplé à **Vagrant** il y a dans ce repo un Vagrantfile et un fichier de provisionnement.
@@ -34,6 +34,15 @@ Pour ceux d'entre vous utilisant un hypervisseur de type 2 (VMWare Fusion, Virtu
         - ```vagrant up --provider=Votre_Hypervisseur```
     - Connexion à la VM :
         - ```vagrant ssh llm```
-    - Lancement du modèle (ATTENTION ! le premier lancement prends du temps): 
+    - Téléchargement et lancement du modèle (ATTENTION ! le premier lancement prends du temps):
         - ```ollama run llama3```
 
+## Pour aller plus loin dans la VM du LLM
+
+A la racide de l'utilisateur standard de la machine créer le fichier de l'agent et le dossier contenant les prompts ce qui donne l'arborescence suivate :
+```
+├── web_agent_expert_devops.py
+└── prompts/
+    └── devops.txt
+```
+Le dossier prompts contiendra les prompts pour chaque agent spécialisé.
