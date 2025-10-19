@@ -1,6 +1,7 @@
 Vagrant.configure("2") do |config|
   config.hostmanager.enabled = true 
   config.hostmanager.manage_host = true
+  config.disksize.size = "100GB"
 
 ### Mon LLM Local vm  ####
   config.vm.define "llm" do |llm|
@@ -9,7 +10,7 @@ Vagrant.configure("2") do |config|
     llm.vm.network "private_network", ip: "192.168.56.75"
     llm.vm.provider "virtualbox" do |vb|
       vb.gui = true
-      vb.allowlist_verified = true
+      # vb.allowlist_verified = true
       vb.cpus = 4
       vb.memory = 16384
     end
