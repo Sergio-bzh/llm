@@ -9,10 +9,11 @@ Vagrant.configure("2") do |config|
     llm.vm.hostname = "llm-local"
     llm.vm.network "private_network", ip: "192.168.56.75"
     llm.vm.provider "virtualbox" do |vb|
-      vb.gui = true
+      vb.gui = false
       # vb.allowlist_verified = true
       vb.cpus = 4
-      vb.memory = 16384
+      # vb.memory = 16384
+      vb.memory = 8192 # Adjusted for testing
     end
     llm.vm.provision "shell", path: "llm_provision.sh"
   end
